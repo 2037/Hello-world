@@ -2,14 +2,23 @@
 
 #include <iostream>
 #include <string>
+#include <cmath>	//sqrt
+#include <climits>	//INT_MAX
+#include <cstring>	//strlen
+ #include <cstdlib>	//system
+#include <stdio.h> //printf
+
+
 #define ZERO 0;
-double c_to_f (int n)
+using namespace std;
+
+double c_to_f(int n)
 {
 	using namespace std;
 	cout << "Please enter Celsius: ";
 	cin >> n;
-	double a = 1.8 * n +32;
-	cout << "The degree Celsius of " << n << " degree C is " << a <<  ". ";
+	double a = 1.8 * n + 32;
+	cout << "The degree Celsius of " << n << " degree C is " << a << ". ";
 	cout << "The bytes is " << sizeof(n) << " bytes.";
 	return sqrt(n);
 }
@@ -52,18 +61,18 @@ void _types()
 	cout << endl;
 	cout << "Maximum long value is " << LONG_MAX << endl;
 	cout << "Bits per bytes = " << CHAR_BIT << endl;
-
 }
 
 void samAndsue()
 {
 	using namespace std;
-	short sam = SHRT_MAX; // initialize a variable to max value
-	unsigned short sue = sam;// okay if variable sam already defined
+	short sam = SHRT_MAX;	  // initialize a variable to max value
+	unsigned short sue = sam; // okay if variable sam already defined
 
 	cout << "Sam has " << sam << " dollars and Sue has " << sue;
 	cout << " dollars deposited." << endl
-		<< "Add $1 to each account." << endl << "Now ";
+		 << "Add $1 to each account." << endl
+		 << "Now ";
 	sam = sam + 1;
 	sue = sue + 1;
 	cout << "Sam has " << sam << " dollars and Sue has " << sue;
@@ -72,17 +81,19 @@ void samAndsue()
 	sue = ZERO;
 	cout << "Sam has " << sam << " dollars and Sue has " << sue;
 	cout << " dollars deposited." << endl;
-	cout << "Take $1 from each account." << endl << "Now ";
+	cout << "Take $1 from each account." << endl
+		 << "Now ";
 	sam = sam - 1;
 	sue = sue - 1;
 	cout << "Sam has " << sam << " dollars and Sue has " << sue;
-	cout << " dollars deposited." << endl << "Lucky Sue!" << endl;
+	cout << " dollars deposited." << endl
+		 << "Lucky Sue!" << endl;
 }
 
 void display()
 {
 	using namespace std;
-	char dog[] = { '\0','b','a','d','\0' };
+	char dog[] = {'\0', 'b', 'a', 'd', '\0'};
 	char cat[] = " bad bad bad ";
 	char alarm = '\a';
 	//
@@ -93,7 +104,7 @@ void display()
 	cout << endl;
 	cout << alarm;
 	//helloworld
-	
+
 	printf("string %s\n", "25");
 	printf("interger %d\n", 25);
 	cout << "XXXXXX\r special character \\\?\'\"\n";
@@ -110,9 +121,9 @@ void display()
 void diff_decimal()
 {
 	using namespace std;
-	int a = 42;		//decimal
+	int a = 42;	  //decimal
 	int b = 0x42; //hex
-	int c = 042;	//octal
+	int c = 042;  //octal
 	cout << a << endl;
 	cout << b << endl;
 	cout << c << endl;
@@ -126,7 +137,7 @@ void diff_decimal()
 void check_char()
 {
 	using namespace std;
-	cout << "the character is " << 'A'<<endl;
+	cout << "the character is " << 'A' << endl;
 	cout << "the code of A is ";
 	cout << (int)'A' << endl;
 
@@ -153,9 +164,6 @@ void _mod()
 	cout << "How heavy are you in pounds?\n";
 	cin >> a;
 	cout << a << " pounds are " << a / 14 << " stones and " << a % 14 << " pounds.\n";
-
-
-
 }
 
 void _arry() //ttt
@@ -164,14 +172,16 @@ void _arry() //ttt
 	cout << "Please enter\n";
 	const int b = 10;
 	char name1[b];
-	cin.getline(name1,b);
-	for (int a = strlen(name1) - 1; a >= 0; a--) {
-		cout << name1[a];	
+	cin.getline(name1, b);
+	for (int a = strlen(name1) - 1; a >= 0; a--)
+	{
+		cout << name1[a];
 	}
 	cout << "\nOops!\n";
 	cout << "\nYour name is " << name1 << endl;
 	cout << "Your name has " << strlen(name1) << " letters.\n";
-	cout << "Your name has " << sizeof name1 << " bytes.\n" << endl;
+	cout << "Your name has " << sizeof name1 << " bytes.\n"
+		 << endl;
 	cout << "Good to see ya!";
 }
 
@@ -193,21 +203,21 @@ void _instr3()
 void _stringOperation()
 {
 	using namespace std;
-	char charr1[20]; // create an empty array
+	char charr1[20];			// create an empty array
 	char charr2[20] = "jaguar"; // create an initialized array
-	string str1; // create an empty string object
-	string str2 = "panther"; // create an initialized string
+	string str1;				// create an empty string object
+	string str2 = "panther";	// create an initialized string
 	cout << "Enter a kind of feline : ";
 	cin >> charr1;
 	cout << "Enter another kind of feline : ";
 	cin >> str1; // use cin for input
 	cout << "Here are some felines : \n";
 	cout << charr1 << " " << charr2 << " " << str1 << " " << str2 // use cout for output
-		<< endl;
+		 << endl;
 	cout << "The third letter in " << charr2 << " is "
-		<< charr2[2] << endl;
+		 << charr2[2] << endl;
 	cout << "The third letter in " << str2 << " is "
-		<< str2[2] << endl; // use array notation
+		 << str2[2] << endl; // use array notation
 }
 int main()
 {
@@ -225,6 +235,8 @@ int main()
 	//_instr3();
 	_stringOperation();
 	cout << endl;
-	system("pause");
+	// system("pause"); mac
+	int c = getchar();
+	
 	return 0;
 }
