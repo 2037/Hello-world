@@ -11,10 +11,10 @@ If we pull from remote with a conflicted line:
     $ CONFLICT (content): Merge conflict in README.md
     $ Automatic merge failed; fix conflicts and then commit the result.
 
-We use 
+We use resolve the conflicts then add the file and commit the file changes.
 
-This version is from local (...)
-The source code was copied from other open resource.
+## Example
 
-This lane is added from remote.
+Try to merge the following.
 
+This lane is added from local. This lane is added from remote.
