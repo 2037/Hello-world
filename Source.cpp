@@ -237,6 +237,5 @@ int main()
 	cout << endl;
 	// system("pause"); mac
 	int c = getchar();
-	
 	return 0;
 }
