@@ -1,3 +1,3 @@
 # Hello-world
-Amateur practice
-This is a pack of introductory coding of Cpp. 
+This is a pack of introductory coding of C++. 
+The source code was copied from other open resource.
